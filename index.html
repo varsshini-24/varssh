@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+</head>
+<body>
+
+  <!-- Logo at the top -->
+  <div style="text-align: center;">
+    <img src="b27079de-bba8-459e-8f1b-b960863953d4.png" alt="KPRCAS Logo" width="100">
+  </div>
+
+  <h2>Login</h2>
+
+  <form id="loginForm">
+    <label>Username:</label><br>
+    <input type="text" id="username" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="password" required><br><br>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      var message = document.getElementById("message");
+
+      // Dummy login check (replace with backend logic)
+      if (username === "admin" && password === "1234") {
+        message.textContent = "Login successful!";
+      } else {
+        message.textContent = "Invalid username or password.";
+      }
+    });
+  </script>
+
+</body>
+</html>
